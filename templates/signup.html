@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> GlueSpark:SignUp </title>
+
+
+
+
+</head>
+
+<body>
+	<form action="" method="POST" >
+        {% csrf_token %}
+        <legend>Sign Up</legend>
+
+
+                        <input type="text" name="firstname" placeholder="firstname" value={{ firstname }}  ><br />
+
+                        <input type="text" name="lastname" placeholder="lastname" value={{ lastname }}  ><br />
+
+						<input type="text" name="username" placeholder="username" value={{ username }} ><br />
+						<input type="email" name="email" placeholder="email" value={{ email }} ><br />
+						<input type="password" name="password" placeholder="password" value={{ password }}  ><br />
+
+
+
+                         <label>Gender : </label>                    <label class="radio-inline">
+                        <input type="radio" name="gender" value={{ gender }} Male />Male
+                        </label>
+                        <label >
+                            <input type="radio" name="gender" value={{ gender }} Female />Female
+                        </label>		<br />
+
+
+                        <input  type="submit" value="Create My Account">
+	            </form>
+        <h3> Or <a href="/gluespark.com/login"> LogIn </a></h3>
+
+</body>
+
+</html>
+

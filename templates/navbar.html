@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bitter|Anton|Ubuntu|Abel|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://use.fontawesome.com/ff45912291.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    
+    </head>
+    <style>
+        body,html{
+            height:100%;
+        }
+        nav{
+            background-color: rgba(0,0,0,0.4);
+            transition: all 0.2s ease;
+            min-height: 100px;
+
+        }
+        .brand-logo img{
+            margin-top:-70px;
+        }
+        li a:hover{
+            text-decoration: none;
+            color:#dd4b39;
+ 
+        }
+        .items{
+            color:#ffffff;
+        }
+        .items.changecolor{
+            color:orangered;
+        }
+  
+        li a:active{
+            text-decoration-line: none;
+        }
+        .nav-wrapper{
+            padding:30px;
+            transition: all 0.1s ease;
+        }
+        nav.shrink  {
+            min-height: 70px;
+            background-color: #ffffff;
+        }
+        .nav-wrapper.shrinkthis{
+            padding:10px;
+        }
+
+    </style>
+    <body>
+        <!--navbar-->
+        <header>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo logo logo1" style="display:none;"><img src="images\gs.png" height=200px width=200px></a>
+                        <a href="#" class="brand-logo logo logo2" style="color:#dd4b39; font-weight:strong;">Gluespark</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="large black-text material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="homepage.html" class="items">Home</a></li>
+                            <li  style="list-style-type:none;"><a href="#" class="dropdown-button  items" data-constrainWidth="false" data-hover="true" data-beloworigin="true" data-activates="dropdown1" data-alignment="right">Companies</a></li>
+                            <li><a  class=" items " href="#">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <ul id="dropdown" class="dropdown-content text-center" style="width:20%;">
+                <li class="text-center"><a href="#!">SabStore</a></li>
+                <li class="text-center"><a href="#!">RealTaste</a></li>
+                <li class="text-center"><a href="#">Goofy</a></li>  
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">Companies</a></li>
+                <li><a  class=" items modal-trigger" href="#modal1">LogOut</a></li>
+            </ul>
+        </header>
+             
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+            $(window).scroll(function() 
+            {
+                if ($(document).scrollTop() > 50) 
+                {
+                    $('nav').addClass('shrink');
+                    $('.nav-wrapper').addClass('shrinkthis');
+                    $('.items').addClass('changecolor');
+                    $('.logo1').show();
+                    $('.logo2').hide();
+                } 
+                else 
+                {
+                    $('nav').removeClass('shrink');
+                    $('.nav-wrapper').removeClass('shrinkthis');
+                    $('.items').removeClass('changecolor');
+                    $('.logo1').hide();
+                    $('.logo2').show();
+                }
+            });
+        </script>
+    </body>
+</html>
